@@ -1,4 +1,5 @@
 import type { AuditResult } from "@/lib/audit-engine";
+import { SpendChart } from "./spend-chart";
 
 const toolLabels: Record<string, string> = {
     chatgpt: "ChatGPT",
@@ -36,6 +37,8 @@ export function AuditReport({
     auditRunCount,
 }: AuditReportProps) {
     const hasHighSavings = auditResult.totalMonthlySavings >= 500;
+    const optimizedSpend =
+        auditResult.totalMonthlySpend - auditResult.totalMonthlySavings;
     const efficiencyScore = Math.max(
         62,
         100 -
@@ -114,6 +117,11 @@ export function AuditReport({
                 </div>
             </div>
 
+            <SpendChart
+                currentSpend={auditResult.totalMonthlySpend}
+                optimizedSpend={optimizedSpend}
+            />
+
             {hasHighSavings && (
                 <div className="mt-5 rounded-2xl border border-indigo-400/20 bg-indigo-500/10 p-5">
                     <p className="text-sm font-medium text-indigo-200">
@@ -144,9 +152,22 @@ export function AuditReport({
                                 {toolLabels[result.tool]} — {planLabels[result.plan]}
                             </p>
 
-                            <p className="text-sm text-emerald-300">
-                                Save ${result.monthlySavings}/mo
-                            </p>
+                            <div className="flex items-center gap-3">
+                                <span
+                                    className={`rounded-full px-3 py-1 text-xs font-medium ${result.priority === "high"
+                                            ? "bg-red-500/20 text-red-300"
+                                            : result.priority === "medium"
+                                                ? "bg-yellow-500/20 text-yellow-300"
+                                                : "bg-emerald-500/20 text-emerald-300"
+                                        }`}
+                                >
+                                    {result.priority.toUpperCase()} PRIORITY
+                                </span>
+
+                                <p className="text-sm text-emerald-300">
+                                    Save ${result.monthlySavings}/mo
+                                </p>
+                            </div>
                         </div>
 
                         <p className="mt-3 text-sm leading-7 text-white/70">
