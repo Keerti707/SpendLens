@@ -18,16 +18,17 @@ SpendLens helps teams:
 
 ## Screenshots / Demo
 
-
 ### Landing Page
-![Landing_Page](<Screenshot From 2026-05-12 23-24-34.png>)
+
+![Landing Page](./screenshots/Landing_Page.png)
 
 ### Audit Report
-![Audit_Report](<Screenshot From 2026-05-12 23-24-52.png>)
+
+![Audit Report](./screenshots/Audit_Report.png)
 
 ### Shared Report Page
-![Shared_Report](<Screenshot From 2026-05-12 23-25-26.png>)
 
+![Shared Report Page](./screenshots/Shared_Report.png)
 
 ## Tech Stack
 
@@ -71,6 +72,7 @@ Each captured audit gets a public report URL at:
 
 ```text
 /report/<audit-id>
+```
 
 The public report avoids showing private lead details.
 

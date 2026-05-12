@@ -151,3 +151,4 @@ The most important economic signal is:
 high-savings lead capture rate
 
 If users with meaningful savings submit their email, the tool has real commercial potential.
+```
