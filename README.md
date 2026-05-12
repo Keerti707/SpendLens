@@ -18,12 +18,16 @@ SpendLens helps teams:
 
 ## Screenshots / Demo
 
-Screenshots or a short screen recording will be added before final submission.
 
-Recommended screenshots:
-1. Landing page + audit form
-2. Generated audit report with chart
-3. Shared public report page
+### Landing Page
+![Landing_Page](<Screenshot From 2026-05-12 23-24-34.png>)
+
+### Audit Report
+![Audit_Report](<Screenshot From 2026-05-12 23-24-52.png>)
+
+### Shared Report Page
+![Shared_Report](<Screenshot From 2026-05-12 23-25-26.png>)
+
 
 ## Tech Stack
 
@@ -156,6 +160,8 @@ tests/
 data/
   leads.json
   reports.json
+
+
 Decisions
 1. Rule-based audit math instead of AI-based math
 
