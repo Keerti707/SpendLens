@@ -106,12 +106,11 @@ export default async function ReportPage({
             <div className="p-8 md:p-10">
               <div className="rounded-3xl border border-red-500/20 bg-red-500/10 p-6">
                 <p className="text-lg font-semibold text-red-300">
-                  Report not found.
+                  Demo report unavailable
                 </p>
 
                 <p className="mt-2 text-sm leading-6 text-white/55">
-                  This audit may not have been saved yet, or the report link may
-                  be incorrect.
+                  This prototype currently uses lightweight demo persistence in production deployment mode.
                 </p>
               </div>
             </div>
