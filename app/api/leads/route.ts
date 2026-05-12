@@ -19,6 +19,18 @@ export async function POST(request: Request) {
     try {
         const body = await request.json();
 
+        if (body.website) {
+            return NextResponse.json(
+                {
+                    success: false,
+                    message: "Spam detected",
+                },
+                {
+                    status: 400,
+                }
+            );
+        }
+
         const existingLeadsRaw = await fs.readFile(
             leadsFilePath,
             "utf-8"

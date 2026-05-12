@@ -25,6 +25,7 @@ export function LeadCaptureDialog({
     const [email, setEmail] = useState("");
     const [company, setCompany] = useState("");
     const [role, setRole] = useState("");
+    const [website, setWebsite] = useState("");
 
     async function handleSubmit() {
         if (!email || !email.includes("@")) {
@@ -49,6 +50,7 @@ export function LeadCaptureDialog({
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
+                    website,
                     email,
                     company,
                     role,
@@ -85,6 +87,15 @@ export function LeadCaptureDialog({
                 </DialogHeader>
 
                 <div className="space-y-5">
+                    <div className="hidden">
+                        <Label>Website</Label>
+                        <Input
+                            tabIndex={-1}
+                            autoComplete="off"
+                            value={website}
+                            onChange={(event) => setWebsite(event.target.value)}
+                        />
+                    </div>
                     <div className="space-y-2">
                         <Label>Email</Label>
                         <Input
