@@ -106,11 +106,11 @@ export default async function ReportPage({
             <div className="p-8 md:p-10">
               <div className="rounded-3xl border border-red-500/20 bg-red-500/10 p-6">
                 <p className="text-lg font-semibold text-red-300">
-                  Demo report unavailable
+                  Demo report unavailable.Prototype persistence limitation
                 </p>
 
                 <p className="mt-2 text-sm leading-6 text-white/55">
-                  This prototype currently uses lightweight demo persistence in production deployment mode.
+                  This deployed prototype currently uses lightweight JSON persistence. In production, reports would be stored in Supabase or Postgres for durable public report URLs.
                 </p>
               </div>
             </div>
