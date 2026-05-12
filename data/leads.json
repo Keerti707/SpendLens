@@ -58,5 +58,15 @@
     "auditId": "536f6f71-c887-424e-9b34-a90e2cff9f6d",
     "monthlySavings": 85,
     "generatedAt": "2026-05-12T10:44:43.632Z"
+  },
+  {
+    "id": "64f6f12b-7890-48a9-95d0-3b0af65d915b",
+    "createdAt": "2026-05-12T12:39:51.178Z",
+    "email": "",
+    "company": "",
+    "role": "",
+    "auditId": "c420bc0b-905c-4138-9955-6430676b562c",
+    "monthlySavings": 85,
+    "generatedAt": "2026-05-12T12:39:47.227Z"
   }
 ]

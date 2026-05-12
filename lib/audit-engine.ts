@@ -215,11 +215,13 @@ export function generateAudit(form: AuditFormData): AuditResult {
             annualSavings: monthlySavings * 12,
 
             priority:
-                monthlySavings >= 500
-                    ? "high"
-                    : monthlySavings >= 100
-                        ? "medium"
-                        : "low",
+                (
+                    monthlySavings >= 500
+                        ? "high"
+                        : monthlySavings >= 100
+                            ? "medium"
+                            : "low"
+                ) as "high" | "medium" | "low",
 
             recommendation,
         };

@@ -27,38 +27,45 @@ export function LeadCaptureDialog({
     const [role, setRole] = useState("");
 
     async function handleSubmit() {
+        if (!email || !email.includes("@")) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (!company.trim()) {
+            alert("Please enter your company name.");
+            return;
+        }
+
+        if (!role.trim()) {
+            alert("Please enter your role.");
+            return;
+        }
+
         try {
             const response = await fetch("/api/leads", {
                 method: "POST",
-
                 headers: {
                     "Content-Type": "application/json",
                 },
-
                 body: JSON.stringify({
                     email,
                     company,
                     role,
-
                     auditId: auditResult.auditId,
-
-                    monthlySavings:
-                        auditResult.totalMonthlySavings,
-
-                    generatedAt:
-                        auditResult.generatedAt,
+                    monthlySavings: auditResult.totalMonthlySavings,
+                    generatedAt: auditResult.generatedAt,
                 }),
             });
 
-            const data = await response.json();
+            if (!response.ok) {
+                throw new Error("Failed to submit report request.");
+            }
 
-            console.log(data);
-
-            alert("Report request submitted successfully!");
+            window.location.href = `/report/${auditResult.auditId}`;
         } catch (error) {
             console.error(error);
-
-            alert("Something went wrong.");
+            alert("Something went wrong while submitting your report request.");
         }
     }
     return (
