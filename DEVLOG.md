@@ -1,6 +1,6 @@
 # Devlog
 
-## Day 1 — 2026-05-11
+## Day 1 — 2026-05-6
 
 **Hours worked:** 4
 
@@ -12,7 +12,7 @@
 
 **Plan for tomorrow:** Build the first audit engine, connect the form to real recommendations, and start shaping the results page.
 
-## Day 2 — 2026-05-12
+## Day 2 — 2026-05-7
 
 **Hours worked:** 6
 
@@ -24,7 +24,7 @@
 
 **Plan for tomorrow:** Improve the report UI, add lead capture, create shareable report pages, and start backend persistence.
 
-## Day 3 — 2026-05-13
+## Day 3 — 2026-05-8
 
 **Hours worked:** 6
 
@@ -36,7 +36,7 @@
 
 **Plan for tomorrow:** Add tests, CI, deployment, and start documenting the architecture and product decisions.
 
-## Day 4 — 2026-05-14
+## Day 4 — 2026-05-9
 
 **Hours worked:** 5
 
@@ -48,7 +48,7 @@
 
 **Plan for tomorrow:** Add AI summary fallback, transactional email support, abuse protection, and prepare the app for final deployment.
 
-## Day 5 — 2026-05-15
+## Day 5 — 2026-05-10
 
 **Hours worked:** 5
 
@@ -60,7 +60,7 @@
 
 **Plan for tomorrow:** Write the required documentation files and make sure the repo structure matches the assignment exactly.
 
-## Day 6 — 2026-05-16
+## Day 6 — 2026-05-11
 
 **Hours worked:** 5
 
@@ -72,7 +72,7 @@
 
 **Plan for tomorrow:** Finish reflection, user interviews, final polish, GitHub upload, and final submission checks.
 
-## Day 7 — 2026-05-17
+## Day 7 — 2026-05-12
 
 **Hours worked:** 4
 

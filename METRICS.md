@@ -4,7 +4,6 @@
 
 The North Star metric for SpendLens is:
 
-```text
 Qualified AI savings reports generated
 
 A qualified savings report means a user completed an audit, received a savings estimate, and generated or requested a report.
@@ -75,4 +74,3 @@ A successful first week would look like:
 3 consultation-ready leads
 
 The most important signal is not traffic volume. It is whether users with real AI spend find the report useful enough to share their email.
-```

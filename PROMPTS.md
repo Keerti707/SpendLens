@@ -14,7 +14,6 @@ This separation is intentional:
 
 The following prompt is used in `app/api/summary/route.ts`.
 
-```text
 You are generating a concise executive summary for an AI spend audit.
 
 Write around 100 words.
@@ -63,4 +62,3 @@ a stricter JSON output schema
 source-aware summaries tied to pricing data versions
 prompt evaluation examples
 regression tests for summary quality
-```

@@ -6,7 +6,6 @@ SpendLens includes automated tests for the core audit engine. I focused the test
 
 ## How to Run Tests
 
-```bash
 npm test
 
 This runs:
@@ -70,4 +69,3 @@ At the time of writing:
 Test Files  1 passed
 Tests       5 passed
 
-```

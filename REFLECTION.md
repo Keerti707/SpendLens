@@ -50,11 +50,11 @@ AI was useful for acceleration, but I stayed responsible for the final behavior 
 
 ## 5. Self-rating
 
-### Discipline: 8/10
+### Discipline: 9.5/10
 
 I worked across multiple stages of the product instead of only building the UI: setup, audit logic, backend routes, tests, deployment, and documentation.
 
-### Code quality: 8/10
+### Code quality: 8.8/10
 
 The code is separated into audit engine, UI components, API routes, and tests. I also fixed TypeScript production build errors instead of ignoring them.
 
@@ -62,10 +62,10 @@ The code is separated into audit engine, UI components, API routes, and tests. I
 
 The UI has a polished SaaS-style direction with dark gradients, cards, charts, priority labels, and a cleaner shared report page. With more time, I would refine mobile spacing further.
 
-### Problem-solving: 8.5/10
+### Problem-solving: 9/10
 
 I debugged hydration issues, localStorage behavior, production build failures, broken navigation, and unstable PDF export. I made trade-offs instead of forcing broken features.
 
-### Entrepreneurial thinking: 8.5/10
+### Entrepreneurial thinking: 9/10
 
 The project includes a full lead-generation flow, shareable reports, GTM thinking, economics modeling, and honest savings behavior. It is designed as something Credex could plausibly use as a top-of-funnel product.

@@ -21,7 +21,6 @@ Because exact Credex margins are private, I used a rough estimate:
 
 For planning, I would use a conservative expected value of:
 
-```text
 $2,000 per converted customer.
 This is intentionally conservative. If Credex handles larger startup or enterprise credit deals, the value could be much higher.
 
@@ -151,4 +150,3 @@ The most important economic signal is:
 high-savings lead capture rate
 
 If users with meaningful savings submit their email, the tool has real commercial potential.
-```

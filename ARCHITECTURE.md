@@ -13,7 +13,6 @@ The system is split into four main layers:
 
 ## System Diagram
 
-```mermaid
 flowchart TD
     A[Visitor lands on SpendLens] --> B[Audit Form]
     B --> C[Local Form State + localStorage]
@@ -116,4 +115,3 @@ The public report page shows only audit ID, generated time, and savings metadata
 The lead form includes a hidden honeypot field to block simple bot submissions.
 
 Secrets such as OPENAI_API_KEY and RESEND_API_KEY are read from environment variables and are not committed to the repository.
-```
