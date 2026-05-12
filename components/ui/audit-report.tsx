@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import type { AuditResult } from "@/lib/audit-engine";
 import { SpendChart } from "./spend-chart";
 import { LeadCaptureDialog } from "@/components/ui/lead-capture-dialog";
@@ -42,6 +43,36 @@ export function AuditReport({
     const hasHighSavings = auditResult.totalMonthlySavings >= 500;
     const optimizedSpend =
         auditResult.totalMonthlySpend - auditResult.totalMonthlySavings;
+    const [summary, setSummary] = useState(auditResult.summary);
+    const [summarySource, setSummarySource] = useState<"ai" | "fallback">(
+        "fallback"
+    );
+
+    useEffect(() => {
+        async function generateSummary() {
+            const response = await fetch("/api/summary", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    totalMonthlySpend: auditResult.totalMonthlySpend,
+                    totalMonthlySavings: auditResult.totalMonthlySavings,
+                    totalAnnualSavings: auditResult.totalAnnualSavings,
+                    toolCount: auditResult.toolResults.length,
+                    toolResults: auditResult.toolResults,
+                    fallbackSummary: auditResult.summary,
+                }),
+            });
+
+            const data = await response.json();
+
+            setSummary(data.summary);
+            setSummarySource(data.source);
+        }
+
+        generateSummary();
+    }, [auditResult]);
     const efficiencyScore = Math.max(
         62,
         100 -
@@ -196,7 +227,10 @@ export function AuditReport({
             </div>
 
             <p className="mt-6 rounded-2xl border border-white/10 bg-black/40 p-5 text-sm leading-7 text-white/75 backdrop-blur">
-                {auditResult.summary}
+                {summary}
+            </p>
+            <p className="mt-2 text-xs text-white/35">
+                Summary source: {summarySource === "ai" ? "AI-generated" : "fallback"}
             </p>
             <LeadCaptureDialog auditResult={auditResult} />
         </div>
