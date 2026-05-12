@@ -1,5 +1,5 @@
-import { AuditFormClient } from "@/components/ui/audit-form-client";
 import Link from "next/link";
+import { AuditFormClient } from "@/components/ui/audit-form-client";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
@@ -27,7 +27,8 @@ export default function Home() {
 
           <Link
             href="/report/demo-report"
-            className="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+            prefetch={false}
+            className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-medium text-white backdrop-blur transition hover:bg-white/10"
           >
             View Sample Report
           </Link>
