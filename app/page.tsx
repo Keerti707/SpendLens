@@ -1,4 +1,4 @@
-import { AuditForm } from "@/components/ui/audit-form";
+import { AuditFormClient } from "@/components/ui/audit-form-client";
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
@@ -28,7 +28,7 @@ export default function Home() {
             View Sample Report
           </button>
         </div>
-        <AuditForm />
+        <AuditFormClient/>
       </div>
     </main>
   );

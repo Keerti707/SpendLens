@@ -1,5 +1,8 @@
+"use client";
+
 import type { AuditResult } from "@/lib/audit-engine";
 import { SpendChart } from "./spend-chart";
+import { LeadCaptureDialog } from "@/components/ui/lead-capture-dialog";
 
 const toolLabels: Record<string, string> = {
     chatgpt: "ChatGPT",
@@ -51,6 +54,7 @@ export function AuditReport({
 
     return (
         <div
+            id="audit-report"
             key={auditRunCount}
             className="mt-8 overflow-hidden rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-emerald-900/5 p-6 shadow-2xl shadow-emerald-500/10"
         >
@@ -72,6 +76,20 @@ export function AuditReport({
                 ${auditResult.totalAnnualSavings}/year estimated savings from $
                 {auditResult.totalMonthlySpend}/mo current spend
             </p>
+
+            <div className="mt-4 flex flex-col gap-2 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
+                <p>
+                    Audit ID:{" "}
+                    <span className="font-mono text-white/60">
+                        {auditResult.auditId.slice(0, 8)}
+                    </span>
+                </p>
+
+                <p>
+                    Generated{" "}
+                    {new Date(auditResult.generatedAt).toLocaleString()}
+                </p>
+            </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
@@ -155,10 +173,10 @@ export function AuditReport({
                             <div className="flex items-center gap-3">
                                 <span
                                     className={`rounded-full px-3 py-1 text-xs font-medium ${result.priority === "high"
-                                            ? "bg-red-500/20 text-red-300"
-                                            : result.priority === "medium"
-                                                ? "bg-yellow-500/20 text-yellow-300"
-                                                : "bg-emerald-500/20 text-emerald-300"
+                                        ? "bg-red-500/20 text-red-300"
+                                        : result.priority === "medium"
+                                            ? "bg-yellow-500/20 text-yellow-300"
+                                            : "bg-emerald-500/20 text-emerald-300"
                                         }`}
                                 >
                                     {result.priority.toUpperCase()} PRIORITY
@@ -180,6 +198,7 @@ export function AuditReport({
             <p className="mt-6 rounded-2xl border border-white/10 bg-black/40 p-5 text-sm leading-7 text-white/75 backdrop-blur">
                 {auditResult.summary}
             </p>
+            <LeadCaptureDialog auditResult={auditResult} />
         </div>
     );
 }

@@ -109,7 +109,6 @@ export function AuditForm() {
         );
     }, [form]);
 
-
     function updateRootField(
         field: "teamSize" | "useCase",
         value: string

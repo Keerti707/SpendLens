@@ -24,10 +24,15 @@ export type ToolAuditResult = {
 };
 
 export type AuditResult = {
+    auditId: string;
+    generatedAt: string;
+
     totalMonthlySpend: number;
     totalMonthlySavings: number;
     totalAnnualSavings: number;
+
     toolResults: ToolAuditResult[];
+
     summary: string;
 };
 
@@ -233,6 +238,8 @@ export function generateAudit(form: AuditFormData): AuditResult {
     const totalAnnualSavings = totalMonthlySavings * 12;
 
     return {
+        auditId: crypto.randomUUID(),
+        generatedAt: new Date().toISOString(),
         totalMonthlySpend,
         totalMonthlySavings,
         totalAnnualSavings,
