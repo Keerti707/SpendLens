@@ -24,7 +24,7 @@ For planning, I would use a conservative expected value of:
 $2,000 per converted customer.
 This is intentionally conservative. If Credex handles larger startup or enterprise credit deals, the value could be much higher.
 
-Funnel Assumptions
+## Funnel Assumptions
 
 A reasonable early funnel could look like:
 
@@ -61,7 +61,7 @@ Target: 20–40%
 
 If Credex can prove the discount is real and relevant, high-savings users should have strong buying intent.
 
-CAC by Channel
+## CAC by Channel
 
 Because the first GTM plan uses mostly organic channels, CAC is mainly time cost.
 
@@ -74,9 +74,9 @@ Credex-owned audience	Lowest CAC	Strongest because audience already matches the 
 
 Credex’s unfair CAC advantage is that it already has a relevant offer: discounted AI infrastructure credits. SpendLens is not just content marketing; it is a diagnostic tool that qualifies the user.
 
-What Makes This Profitable
+## What Makes This Profitable
 
-Assume:
+#### Assume:
 
 Monthly visitors: 10,000
 Audit completion rate: 25%
@@ -86,7 +86,7 @@ Consultation booking rate: 20%
 Purchase conversion rate: 25%
 Value per converted customer: $2,000
 
-Math:
+## Math:
 
 10,000 visitors
 × 25% audit completion = 2,500 completed audits
@@ -108,7 +108,7 @@ Math:
 
 This would make the tool valuable even before considering brand awareness, retargeting, and repeat usage.
 
-Path to $1M ARR Impact
+## Path to $1M ARR Impact
 
 For SpendLens to drive $1M ARR-equivalent impact in 18 months, at least one of these must be true:
 
@@ -118,7 +118,7 @@ The audit becomes a strong recurring benchmark that users revisit quarterly.
 The tool becomes embedded in founder/operator communities.
 Credex uses the audit as the default qualification step for inbound leads.
 
-A possible path:
+#### A possible path:
 
 50 converted customers/month
 × $2,000 expected value
@@ -127,13 +127,13 @@ A possible path:
 
 This requires either strong organic distribution or a much higher average deal value.
 
-Key Economic Risk
+## Key Economic Risk
 
 The biggest risk is low trust. If the recommendations feel vague or inflated, users will not submit their email or book a consultation.
 
 That is why SpendLens keeps the audit math rule-based and explains recommendations in plain language. The product should be honest when savings are low instead of manufacturing fake urgency.
 
-What I Would Measure First
+## What I Would Measure First
 
 I would instrument:
 
@@ -145,7 +145,7 @@ lead captured
 report opened
 consultation clicked/booked
 
-The most important economic signal is:
+## The most important economic signal is:
 
 high-savings lead capture rate
 

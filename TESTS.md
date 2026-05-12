@@ -44,7 +44,7 @@ Test: assigns high priority to large savings opportunities
 
 This checks that large savings opportunities are marked as high priority so the user can act on the most important recommendation first.
 
-Why These Tests Matter
+## Why These Tests Matter
 
 The audit engine is the part of SpendLens that users must trust. These tests cover the major recommendation categories:
 
@@ -64,7 +64,7 @@ public report page tests
 end-to-end tests with Playwright
 Latest Local Test Result
 
-At the time of writing:
+## At the time of writing:
 
 Test Files  1 passed
 Tests       5 passed
