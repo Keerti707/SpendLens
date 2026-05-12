@@ -1,3 +1,4 @@
+import { Resend } from "resend";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -73,6 +74,28 @@ export async function POST(request: Request) {
             JSON.stringify(existingLeads, null, 2)
         );
 
+        if (process.env.RESEND_API_KEY) {
+            const resend = new Resend(process.env.RESEND_API_KEY);
+
+            await resend.emails.send({
+                from: "SpendLens <onboarding@resend.dev>",
+                to: body.email,
+                subject: "Your SpendLens AI spend audit is ready",
+                html: `
+      <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+        <h2>Your SpendLens audit is ready</h2>
+        <p>Thanks for using SpendLens. Your audit found an estimated <strong>$${body.monthlySavings}/month</strong> in potential AI spend savings.</p>
+        <p>You can view your public report here:</p>
+        <p><a href="${process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"}/report/${body.auditId}">Open audit report</a></p>
+        ${body.monthlySavings >= 500
+                        ? "<p>Your savings potential is high enough that a Credex consultation may help capture more of this value through discounted AI credits.</p>"
+                        : "<p>Your stack has been recorded for future optimization updates.</p>"
+                    }
+      </div>
+    `,
+            });
+        }
+        
         return NextResponse.json({
             success: true,
             message: "Lead captured successfully",
