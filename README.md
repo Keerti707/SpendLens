@@ -70,35 +70,41 @@ Each captured audit gets a public report URL at:
 
 The public report avoids showing private lead details.
 
+
+
 Abuse protection
 
 The lead form includes a honeypot field to reject basic bot submissions.
 
+
+
 Quick Start
 
 Install dependencies:
-
 npm install
 
-Run the development server:
 
+Run the development server:
 npm run dev
 
-Open:
 
+Open:
 http://localhost:3000
 
-Run lint:
 
+Run lint:
 npm run lint
 
-Run tests:
 
+Run tests:
 npm test
 
-Run production build:
 
+Run production build:
 npm run build
+
+
+
 Environment Variables
 
 The app works without these variables by falling back safely, but these can be configured for production behavior:
