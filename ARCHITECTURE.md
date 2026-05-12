@@ -13,23 +13,29 @@ The system is split into four main layers:
 
 ## System Diagram
 
-```mermaid
-flowchart TD
-    A[Visitor lands on SpendLens] --> B[Audit Form]
-    B --> C[Local Form State + localStorage]
-    B --> D[Rule-based Audit Engine]
-    D --> E[Audit Result Dashboard]
-    E --> F[AI Summary API]
-    F --> E
-    E --> G[Lead Capture Dialog]
-    G --> H[POST /api/leads]
-    H --> I[data/leads.json]
-    H --> J[data/reports.json]
-    H --> K[Optional Resend Email]
-    H --> L[Redirect to /report/:auditId]
-    L --> M[Public Report Page]
-    ```
-    
+```text
+Visitor
+  ↓
+Audit Form
+  ↓
+Rule-based Audit Engine
+  ↓
+Audit Result Dashboard
+  ↓
+AI Summary API
+  ↓
+Lead Capture Dialog
+  ↓
+POST /api/leads
+  ↓
+Lead + Report Storage
+  ↓
+Optional Resend Email
+  ↓
+/report/:auditId
+  ↓
+Public Report Page
+
 Data Flow
 The user opens the landing page and fills the audit form.
 Form state is stored in React state and persisted to localStorage so refreshes do not wipe progress.
